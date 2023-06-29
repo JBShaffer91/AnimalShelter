@@ -1,6 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using AnimalShelterApi.Data;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<AnimalShelterContext>(options =>
+    options.UseMySql("Server=localhost;Database=animalshelter;User=root;Password=;", 
+    new MySqlServerVersion(new Version(8, 0, 21)))); // Replace with your MySQL version
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
