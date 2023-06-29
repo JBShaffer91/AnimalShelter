@@ -1,0 +1,25 @@
+@model IEnumerable<AnimalShelterMvc.Models.Animal>
+
+<h1>Animals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Species</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach (var animal in Model)
+    {
+      <tr>
+        <td>@animal.Id</td>
+        <td>@animal.Name</td>
+        <td>@animal.Species</td>
+        <td>@animal.Age</td>
+      </tr>
+    }
+  </tbody>
+</table>
