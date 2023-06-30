@@ -1,8 +1,9 @@
-namespace AnimalShelterMvc.Models;
-
-public class ErrorViewModel
+namespace AnimalShelterApi.Models
 {
+  public class ErrorViewModel
+  {
     public string? RequestId { get; set; }
 
     public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+    }
 }

@@ -7,7 +7,7 @@ using AnimalShelterApi.Models;
 
 namespace AnimalShelterApi.Controllers
 {
-  [Route("api/[controller]")]
+  [Route("[controller]")]
   [ApiController]
   public class AnimalsController : ControllerBase
   {
